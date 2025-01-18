@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>游戏合集 - 首页 (ZH)</title>
+
+  <!-- SEO相关: meta描述、关键词等 -->
+  <meta name="description" content="在一个程序中畅玩多款经典游戏和益智游戏 - 中文版。">
+  <meta name="keywords" content="黑白棋, 五子棋, 国际跳棋, 益智游戏, 中文">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 多语言 alternate：指向英文首页 -->
+  <link rel="alternate" hreflang="en" href="https://www.example.com/en/" />
+  <link rel="alternate" hreflang="zh" href="https://www.example.com/zh/" />
+
+  <!-- 引入CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 这里留一个div，JS会把 nav.html 内容插进来 -->
+<div id="top-nav"></div>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>欢迎来到我们的游戏合集</h1>
+    <p>在一个程序中畅玩多款经典游戏和益智游戏！包含黑白棋、五子棋、国际跳棋等。</p>
+    <a class="download-btn" href="#">下载 Windows 版本</a>
+    <a class="download-btn" href="#">下载 Mac 版本</a>
+  </div>
+</section>
+
+<div class="container">
+  <h2 class="game-section-title">精选游戏</h2>
+
+  <div class="game-grid">
+    <!-- 卡片: 黑白棋 -->
+    <div class="game-card">
+      <img src="../images/game1.jpg" alt="黑白棋截图">
+      <div class="game-card-content">
+        <h3>黑白棋</h3>
+        <p>通过“夹击”对手的棋子使其翻面，策略性极强。</p>
+        <div class="card-actions">
+          <a class="download-btn" href="othello.html">了解更多</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 卡片: 五子棋 -->
+    <div class="game-card">
+      <img src="../images/game2.jpg" alt="五子棋截图">
+      <div class="game-card-content">
+        <h3>五子棋</h3>
+        <p>先在横、竖或斜线上连成五子即胜，简单却不失深度。</p>
+        <div class="card-actions">
+          <a class="download-btn" href="gomoku.html">了解更多</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 卡片: 国际跳棋 -->
+    <div class="game-card">
+      <img src="../images/game3.jpg" alt="国际跳棋截图">
+      <div class="game-card-content">
+        <h3>国际跳棋</h3>
+        <p>在10×10棋盘上跳吃对手棋子，升王后更具威力。</p>
+        <div class="card-actions">
+          <a class="download-btn" href="checkers.html">了解更多</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 更多游戏示例卡片 -->
+    <div class="game-card">
+      <img src="../images/game-coming.jpg" alt="更多游戏">
+      <div class="game-card-content">
+        <h3>更多游戏即将上线</h3>
+        <p>数独、扫雷、2048、俄罗斯方块、贪吃蛇等敬请期待！</p>
+        <div class="card-actions">
+          <a class="download-btn" href="#">敬请期待</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 游戏合集 (ZH). 保留所有权利.</p>
+</footer>
+<!-- 引入JS脚本自动加载导航 -->
+<script src="../load-nav.js"></script>
+</body>
+</html>

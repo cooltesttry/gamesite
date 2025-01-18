@@ -1,0 +1,242 @@
+/* =============================
+   style.css - 公共样式示例
+   ============================= */
+
+/* ========= 基础重置 ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: #007bff; /* 默认链接颜色 */
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ========= 导航栏 ========= */
+  .site-nav {
+    background: #24292e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* 缩小上下间距，适应 32×32 图标 */
+    padding: 0.3rem 1rem;
+  }
+  
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+  }
+  
+  .nav-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-icon {
+    width: 32px;   /* 图标大小 */
+    height: 32px;
+    display: block;
+  }
+  
+  /* 语言切换区域 */
+  .lang-switch {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .lang-switch a {
+    color: #fff;
+    background: #444;
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+    transition: background 0.2s;
+  }
+  .lang-switch a:hover {
+    background: #666;
+  }
+  
+  /* ========= Hero(首页大背景) ========= */
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+    /* 示例背景图，按实际图片替换 */
+    background: linear-gradient(100deg, #667eea, #764ba2);
+    /*background: url('../images/hero-bg.jpg') center/cover no-repeat;*/
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.5); /* 半透明遮罩 */
+  }
+  .hero-content {
+    position: relative; /* 处于遮罩之上 */
+    color: #fff;
+    max-width: 800px;
+    padding: 2rem 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  }
+  
+  /* ========= 通用下载按钮 ========= */
+  .download-btn {
+    display: inline-block;
+    background: #ff9800;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    transition: background 0.2s;
+  }
+  .download-btn:hover {
+    background: #ef6c00;
+  }
+  
+  /* ========= 容器和排版基础 ========= */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* ========= 首页游戏卡片区域 ========= */
+  .game-section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+  }
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* 整个卡片可点击：将卡片用 <a> 包裹，而非内置按钮 */
+  .game-card {
+    display: flex; 
+    flex-direction: column;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #333;      /* 链接文字颜色 */
+    text-decoration: none; /* 移除下划线 */
+    transition: box-shadow 0.2s;
+  }
+  .game-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  .game-card-content {
+    flex: 1;  /* 占据剩余高度 */
+    padding: 1rem;
+  }
+  .game-card-content h3 {
+    margin-bottom: 0.5rem;
+  }
+  .game-card-content p {
+    line-height: 1.4;
+  }
+  
+  /* 如果保留了旧的按钮区域，可隐藏或删除
+  .card-actions {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  */
+  
+  /* ========= 子页面顶部通栏 (sub-hero) ========= */
+  .sub-hero {
+    /* 移除左右 padding，使用内部 container 控制对齐 */
+    padding: 2rem 0;
+    /* 演示渐变背景，也可换背景图 */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+  }
+  .hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-left img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  .hero-right {
+    flex: 1;
+    min-width: 280px;
+    padding-left: 20px;  /* 加入 20px 左内边距，调整右侧区域与图片间距 */
+  }
+  .hero-right h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .highlights {
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+
+  /* 针对亮点列表的调整 */
+.highlights ul {
+    margin-left: 20px;   /* 将列表整体向右缩进20px */
+  }
+  
+  /* ========= 子页面主要内容区 ========= */
+  .page-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 4px;
+  }
+  .page-content h2 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  .page-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  
+  /* ========= 页脚 ========= */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
